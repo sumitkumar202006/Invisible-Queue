@@ -19,15 +19,15 @@ export default function MaintenanceBanner() {
             <span>
               {lang === 'hi'
                 ? 'यह वेबसाइट वर्तमान में रखरखाव और सिस्टम सुधार के अंतर्गत है। हमारी टीम इस पर तत्परता से कार्य कर रही है।'
-                : 'This website is currently under active maintenance. Our engineering team is thoroughly working on system enhancements.'}
+                : 'This website is currently under active maintenance. Our engineering team is thoroughly working on system enhancements and on real data.'}
             </span>
           </div>
         </div>
 
-        <div className="hidden md:flex items-center space-x-1.5 text-xs font-bold text-amber-950/80 bg-amber-400/60 px-2.5 py-1 rounded-full border border-amber-600/40">
+        {/* <div className="hidden md:flex items-center space-x-1.5 text-xs font-bold text-amber-950/80 bg-amber-400/60 px-2.5 py-1 rounded-full border border-amber-600/40">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Active Engineering Sprint</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
