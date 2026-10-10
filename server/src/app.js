@@ -41,13 +41,15 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`===============================================`);
-  console.log(`  Invisible Queue Server running on port ${PORT}`);
-  console.log(`  Health Check: http://localhost:${PORT}/health`);
-  console.log(`  API Base:     http://localhost:${PORT}/api/v1`);
-  console.log(`===============================================`);
-});
+// Start Server (only when not running inside Vercel serverless)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`===============================================`);
+    console.log(`  Invisible Queue Server running on port ${PORT}`);
+    console.log(`  Health Check: http://localhost:${PORT}/health`);
+    console.log(`  API Base:     http://localhost:${PORT}/api/v1`);
+    console.log(`===============================================`);
+  });
+}
 
 export default app;
