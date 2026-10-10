@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Smart waiting-time prediction and crowd-management platform for essential public services",
   "private": true,
+  "type": "module",
   "workspaces": [
     "client",
     "server"
   ],
   "scripts": {
+    "dev": "node run-dev.js",
     "dev:server": "npm --prefix server run dev",
     "dev:client": "npm --prefix client run dev",
     "dev:pred": "cd prediction && uvicorn app.main:app --reload --port 8000",
