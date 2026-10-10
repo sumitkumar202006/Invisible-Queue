@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import Navbar from './components/Navbar';
+import MaintenanceBanner from './components/MaintenanceBanner';
 import CitizenHome from './pages/citizen/CitizenHome';
 import OrgDashboard from './pages/org/OrgDashboard';
 import { Info, ShieldCheck } from 'lucide-react';
@@ -11,6 +12,7 @@ function AppContent() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+      <MaintenanceBanner />
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <main className="flex-1">
