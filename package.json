@@ -1,0 +1,24 @@
+{
+  "name": "invisible-queue",
+  "version": "1.0.0",
+  "description": "Smart waiting-time prediction and crowd-management platform for essential public services",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev:pred": "cd prediction && uvicorn app.main:app --reload --port 8000",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "crowd-management",
+    "queue-prediction",
+    "public-services",
+    "civic-tech"
+  ],
+  "author": "Invisible Queue Team",
+  "license": "MIT"
+}
